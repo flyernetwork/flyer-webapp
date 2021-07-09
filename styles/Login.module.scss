@@ -1,0 +1,206 @@
+
+    $back : rgb(210,215,16);
+    $grad-background: linear-gradient(90deg, rgba(210,215,16,1) 0%, rgba(215,175,35,1) 0%, rgba(219,171,61,1) 16%, rgba(242,32,211,1) 96%, rgba(206,16,241,1) 100%);
+
+.container {
+    margin: 5rem 5rem;
+    color: black;
+    display: flex;
+    max-width: 100vw;
+    font-size: 16px;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    background-color: white;
+
+    & section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 50%;
+        height: 80vh;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+            margin-bottom: -7rem;
+            align-items: center;
+            width: 15rem;
+            height: 15rem;
+
+            Image {
+            width: 4rem;
+            height: 4rem;
+            }
+        }
+
+
+        & form {
+            margin-top: -5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            input {
+                border: 1px solid #afafaf;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+
+            input[type=submit] {
+                padding: 1rem 1rem;
+                margin-top: -1rem;
+                background: $back;
+                background: $grad-background;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                font-size: 1rem;
+            }
+        }
+            a {
+                font-size: 1.1rem;
+                color: black;
+                margin-top: -5rem;
+                }
+
+            span {
+                margin-bottom: 2rem;
+
+                button {
+                padding: 1rem 1rem;
+                margin-left: 1rem;
+                background: linear-gradient(to right, rgba(210,215,16,1) 0%, rgba(215,175,35,1) 0%, rgba(219,171,61,1) 16%, rgba(242,32,211,1) 96%, rgba(206,16,241,1) 100%);
+                border-radius: 8px;
+                color: #122dff;
+                display: inline-block;
+                font-size: 20px;
+                padding: 1px;
+                border: none;
+                cursor: pointer;
+
+                i {
+                    background: #fff;
+                    display: block;
+                    padding: 1rem 1rem;
+                    border-radius: 6px;
+                }
+                
+                }
+            }
+        }
+        
+        aside {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        min-width: 50%;
+        height: 80vh;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        background: $grad-background;
+        background-size: 100%;
+        h4 {
+            margin-top: 5rem;
+            font-size: 2rem;
+        }
+    }
+}
+
+    .container .enabled, .container .disabled{
+        min-width: 50%;
+        height: 80vh;
+        background-color: white;
+        position: absolute;
+        z-index: -1;
+
+        div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-top: 3rem;
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+            input {
+                border: 1px solid #afafaf;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            input + input {
+                margin-top:1rem;
+            }
+
+            input[type=submit] {
+                padding: 1rem 1rem;
+                background: $back;
+                background: $grad-background;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                font-size: 1rem;
+            }
+        }
+
+        span {
+            margin-bottom: 2rem;
+
+            button {
+            padding: 1rem 1rem;
+            margin-left: 1rem;
+            background: linear-gradient(to right, rgba(210,215,16,1) 0%, rgba(215,175,35,1) 0%, rgba(219,171,61,1) 16%, rgba(242,32,211,1) 96%, rgba(206,16,241,1) 100%);
+            border-radius: 8px;
+            color: #122dff;
+            display: inline-block;
+            font-size: 20px;
+            padding: 1px;
+            border: none;
+            cursor: pointer;
+
+            i {
+                background: #fff;
+                display: block;
+                padding: 1rem 1rem;
+                border-radius: 6px;
+                }
+             }
+            }
+        }
+    }
+
+    .enabled {
+        animation: register-fadeIn 1ms forwards;
+    }
+
+@keyframes deslize-register {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes register-fadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        z-index: 1;
+    }
+}
