@@ -12,6 +12,8 @@
     transition: all 1s;
     overflow: hidden;
     background-color: white;
+    border: 1px solid #8d8282;
+    border-radius: 0.5rem;
 
     & section {
         display: flex;
@@ -27,7 +29,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 3rem;
-            margin-bottom: -7rem;
+            margin-bottom: -6rem;
             align-items: center;
             width: 15rem;
             height: 15rem;
@@ -68,7 +70,7 @@
             a {
                 font-size: 1.1rem;
                 color: black;
-                margin-top: -5rem;
+                margin-top: -3rem;
                 }
 
             span {
@@ -190,9 +192,10 @@
     
     .error_message {
                 border-radius: 0.25rem;
-                background-color: rgba(226, 58, 86,90%);
+                padding: 0.1rem;
+                border: 1px solid rgba(226, 58, 86,90%);
+                color: red;
                 margin-bottom: 0.1rem;
-                color: white;
                 margin: 0.25rem;
             }
 

@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Roboto;
-  background: #000000;
+  background: linear-gradient(90deg, rgba(210,215,16,0.8) 0%, rgba(215,175,35,1) 0%, rgba(219,171,61,1) 16%, rgba(242,32,211,1) 96%, rgba(206,16,241,0.9) 100%);;
 }
 
 a {

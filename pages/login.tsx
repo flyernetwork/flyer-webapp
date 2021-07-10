@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from '../styles/Login.module.scss'
 import LoginForm from '../components/login'
 import RegisterForm from '../components/register';
-import { LoginProvider } from '../Context/LoginService';
+import { LoginProvider } from '../Context/LoginContext';
 
 function Login() {
 

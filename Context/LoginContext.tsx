@@ -1,5 +1,4 @@
-import { apiResolver } from "next/dist/next-server/server/api-utils";
-import { useState, createContext, Children, useEffect } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 import { INSTANCE } from "../services/Axios/AxiosApi";
 
 interface LoginProps {
@@ -21,10 +20,10 @@ export function LoginProvider({children}){
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+
         if(sessionStorage.getItem('token')){
             INSTANCE.defaults.headers.Authorization = 'Bearer ${response.data.token}'
-            setLogged(true)
-            
+            setLogged(true)    
         }
         setLoading(false)
     }, [])
@@ -46,4 +45,9 @@ export function LoginProvider({children}){
             {children}
         </LoginContext.Provider>
     )
+}
+
+export function useLogin() {
+    
+    return useContext(LoginContext)
 }

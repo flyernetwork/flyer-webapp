@@ -1,9 +1,10 @@
 import styles from '../../styles/Login.module.scss'
 import logoImg from '../../public/images/logo.jpg'
 import Image from 'next/image'
-import { useState, useContext } from 'react';
+import { useState} from 'react';
 import { useForm } from 'react-hook-form';
-import LoginContext from '../../Context/LoginService';
+import LoginContext, { useLogin } from '../../Context/LoginContext';
+import { useRouter } from 'next/dist/client/router';
 
 interface LoginProps {
   registerActive: boolean,
@@ -17,15 +18,17 @@ interface formValidate {
 
 export default function LoginForm({ registerActive, handleOpenRegister }: LoginProps) {
 
+  const router = useRouter();
+
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
 
   const { register, handleSubmit, formState: { errors } } = useForm<formValidate>()
 
-  const { login, logged } = useContext(LoginContext);
-
-  if(logged == true){
-    return <h1>Logado com sucesso</h1>
+  const {logged, login} =  useLogin()
+  
+  if(logged){
+    router.push('Logged')
   }
 
   return (
