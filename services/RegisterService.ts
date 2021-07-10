@@ -7,5 +7,6 @@ interface RegisterProps {
 }
 
 export async function CreateAccountService({user,password, email} : RegisterProps){
-    return await INSTANCE.post('/register', {user,password,email}).then((result) => result.status)
+ await INSTANCE.post('/register', {'user':user, 'password': password,'email': email}).then((result) => result.status)
+    
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from '../styles/Login.module.scss'
 import LoginForm from '../components/login'
 import RegisterForm from '../components/register';
+import { LoginProvider } from '../Context/LoginService';
 
 function Login() {
 
@@ -15,7 +16,7 @@ function Login() {
   }
 
   return (
-  <>
+  <LoginProvider>
     <main className={styles.container}>
       <LoginForm registerActive={activateRegister} handleOpenRegister={handleOpenRegister}/>
       <aside>
@@ -24,7 +25,7 @@ function Login() {
       </aside>
       <RegisterForm  activateRegister={activateRegister} handleCloseRegister={handleCloseRegister}/>
     </main>
-  </>
+  </LoginProvider>
   );
 }
 

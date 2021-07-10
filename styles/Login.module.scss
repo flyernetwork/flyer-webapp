@@ -36,15 +36,18 @@
             width: 4rem;
             height: 4rem;
             }
+
         }
 
 
         & form {
-            margin-top: -5rem;
+            margin-top: -4rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             
+            
+
             input {
                 border: 1px solid #afafaf;
                 border-radius: 0.5rem;
@@ -184,6 +187,14 @@
     .enabled {
         animation: register-fadeIn 1ms forwards;
     }
+    
+    .error_message {
+                border-radius: 0.25rem;
+                background-color: rgba(226, 58, 86,90%);
+                margin-bottom: 0.1rem;
+                color: white;
+                margin: 0.25rem;
+            }
 
 @keyframes deslize-register {
     0% {

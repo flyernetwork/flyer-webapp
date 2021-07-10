@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.loading_page {
+  position: absolute;
+  padding: 2rem;
+  right: 50%;
+  top:50%;
+  border: 0.5rem white solid;
+  border-left-color: aqua;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
